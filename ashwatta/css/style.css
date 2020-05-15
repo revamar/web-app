@@ -86,7 +86,8 @@ p {
 /* ========================================== */
 .navbar-default {
     background: #fff;
-    border: none;
+    border: 30;
+	border-color:red;
     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
     margin: 0 !important;
   }
@@ -99,8 +100,8 @@ p {
   margin: 15px 20px;
 }
 .navbar-default .navbar-nav li a {
-    color: #303030;
-    font-size: 12px;
+    color: #ffa400;
+    font-size: 13px;
     font-weight: bold;
     padding: 0px;
   }
