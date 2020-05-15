@@ -342,14 +342,14 @@ p {
 /* footer section styles
 /* ========================================== */
 footer {
-  padding-top: 80px;
-  padding-bottom: 50px;
+	padding-top: 80px;
+	padding-bottom: 50px;
 }
 
 footer p {
-  padding-right: 40px;
-  padding-bottom: 20px;
-  font-size: 14px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	font-size: 14px;
 }
 
 footer a {
@@ -360,7 +360,11 @@ footer a:hover {
   color: #ffa400;
   text-decoration: none;
 }
-
+#footer-copy-right-text{
+	text-align: center;
+	color: #ffa400;
+	font:bold;
+	}
 .link-list a {
   color: #606060;
   display: block;
