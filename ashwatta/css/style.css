@@ -264,8 +264,9 @@ p {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding-top: 160px;
-  padding-bottom: 160px;
+  height: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #counter .counter-number {
@@ -337,13 +338,26 @@ p {
 #contact .contact-detail div {
   padding-bottom: 10px;
 }
+/* donation page */
+
+.donation-content p{
+	padding-left:30px;
+	padding-right:30px;
+	display: inline-block;
+
+}
+
+#donation-page-tagline{
+	text-align:center;
+	padding-top:50px;
+}
 
 
 /* footer section styles
 /* ========================================== */
 footer {
-	padding-top: 80px;
-	padding-bottom: 50px;
+	height: 200px;
+	padding-top:20px;
 }
 
 footer p {
