@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculated Page</title>
+    <link rel="stylesheet" href="stylescripts/homepage.css">
+  </head>
+  <body id="budget_calculator_html_body" onload="calculateBudgetOnIncome(2000);">
+    <p>You have successfully submitted &#10003;</p>
+      <div class="expense_overview" id="finance_manager">
+        <div class="overview_title">
+          <h3>Financial summary:</h3>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="finance_detail" >Budget:
+        </div>
+        <div class="budget_amount" id="budget_amount">
+          1000
+        </div>
+        <br>
+        <br>
+        <div class="finance_detail">Expense:
+        </div>
+        <div class="budget_amount" id="expense_amount">
+          100
+        </div>
+        <br>
+        <br>
+        <div class="finance_detail">Balance:
+        </div>
+        <div class="budget_amount" id="balance_amount">
+          200
+        </div>
+        <br>
+        <br>
+        <div class="finance_detail">Saving:
+        </div>
+        <div class="budget_amount" id="saving_amount">
+          1000
+        </div>
+      </div>
+
+    <div class="form-divs">
+      <form class="add_budget_form" name="add_in_budget_form">
+      <h3>Update Your Expense Budget:</h3>
+      Add Budget: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="add_money_in_budget" value="0"> &nbsp; &nbsp;
+      <input type="button" name="update_budget_money" value="Update Budget" onclick="updateBudgetAmount()">
+      <br><br>
+      Reduce Budget:&nbsp; <input type="number" name="reduce_money_in_budget" value="0"> &nbsp; &nbsp;
+      <input type="button" name="reduce_budget_money" value="Reduce Budget" onclick="reduceBudgetAmount()">
+      </form>
+    </div>
+    <div class="form-divs">
+      <form class="forms" name="add_more_expense_form">
+        <h3>Add more expenses:</h3>
+        <label for="description">
+        Description:&nbsp; &nbsp; &nbsp;
+        </label>
+        <textarea name="description" rows="2" cols="30"></textarea><br><br>
+        <label for="category">
+        Category: &nbsp; &nbsp;&nbsp; &nbsp;
+        </label>
+        <select name="expense_area" id="expense_add_on">
+          <option name="rent" value="Rent">Rent</option>
+          <option name="emi" value="EMI">EMI</option>
+          <option name="grocery" value="Grocery">Grocery</option>
+          <option name= "bills" value="Bills">Bills</option>
+        </select><br><br>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount" value="0"><br><br>
+        <label for="expensedate">
+        Date of Expense:
+      </label>
+      <input type="date" name="ependiture_date" id="ependiture_date" value=""><br><br>
+      <input type="button" name="more_expense" value="Add More Expense" onclick="addAllExplenses()>
+    </form>
+  </div>
+  <div>
+    <h3>Your expenses are here:</h3>
+    <span class="short-text">
+      <div class="row">
+      <div class="column">
+        <h4>Room Rent Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Room Rent</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">Rent</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">1200</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">01-03-2020</label>
+        </div>
+      </div>
+      <div class="column">
+        <h4>EMI Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Axis Bank EMI</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">EMI</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">1000</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">12-02-2020</label>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Bills Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Phone bill, Light Bill, TV bill</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">Bills</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">1500</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">14-04-2021</label>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Grocery Item Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Grocery Items</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">Greocery</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">5000</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">13-05-2020</label>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Room Rent Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Room Rent</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">Rent</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">1200</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">Date</label>
+        </div>
+      </div>
+    </div>
+  </span>
+    <span class="long-text">
+      <div class="column">
+        <h4>Grocery Item Expense-</h4>
+        <div class="expense_data">
+          <label for="description">Description:</label &nbsp; &nbsp;
+          <label for="description_value">Grocery Items</label><br><br>
+          <label for="expense_type">Category:</label>&nbsp;
+          <label for="expense_type_value">Greocery</label><br><br>
+          <label for="expense_aamount">Amount: </label>&nbsp;
+          <label for="expense_aamount_value">2000</label><br><br>
+          <label for="expense_day">Date:</label>&nbsp;
+          <label for="expense_day_value">18-05-2020</label>
+        </div>
+      </div>
+    </span>
+    <span class="text-dots"></span>
+    <span class="show-more-button" data-more="0"><br>
+      <button type="button" name="button" onclick="showAllExpenses()" >View all </button>
+    </span>
+  </div>
+
+<!-- javascripts
+  <script type="text/javascript" src="javascripts/homepagescript.js">
+  </script>
+-->
+  <script type="text/javascript" src="javascripts/budgetcalculator.js">
+  </script>
+  </body>
+</html>

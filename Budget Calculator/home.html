@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="stylescripts/homepage.css">
+  </head>
+  <body id="budget_calculator_html_body">
+    <p id="amar">Amar Yadav</p>
+      <form class="" name="budget" action="calc.html" onsubmit="return validateBudgetForm();" method="get">
+        Income: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="number" name="incomeamount" value="" required/>
+        <br/><br/>
+        Budget End Date:&nbsp; &nbsp;
+        <input type="date" name="bdgtdate" value="" id="dt" required/>
+        <br/><br/>
+        <input type="submit" name="submit_button" value="Calculate" />
+      </form>
+
+      <!--javascripts -->
+      <script type="text/javascript" src="javascripts/homepagescript.js">
+      </script>
+  </body>
+</html>

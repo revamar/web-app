@@ -1,0 +1,58 @@
+#budget_calculator_html_body{
+  background-color: AliceBlue;
+}
+#budget_calculator_html_body p{
+  text-align: left;
+
+  color: #3cb371;
+}
+#finance_manager{
+  text-align:center;
+  background-color: #7FFFD4;
+  width: 300px;
+  margin:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.finance_detail, .budget_amount {
+   display:inline;
+   margin-left: 20px;
+}
+.finance_detail{
+  font-weight: bold;
+  font-style: normal;
+}
+
+form{
+  text-align: center;
+  margin: 40px;
+}
+form h3{
+  text-align: left;
+  padding-left: 180px;
+}
+
+form textarea{
+  width:200px;
+}
+form select {
+  width:200px;
+}
+
+form > #amount{
+  width:200px;
+}
+form > #ependiture_date{
+  width:200px;
+}
+.expenses_lists p{
+  padding-left: 0px;
+}
+
+.long-text {
+  display: none
+}
+.column{
+  text-align: left;
+}
