@@ -1,9 +1,8 @@
 #budget_calculator_html_body{
   background-color: AliceBlue;
+  margin: 40px;
 }
 #budget_calculator_html_body p{
-  text-align: left;
-
   color: #3cb371;
 }
 #finance_manager{
@@ -55,4 +54,15 @@ form > #ependiture_date{
 }
 .column{
   text-align: left;
+}
+
+#dt_value {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+footer p{
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }

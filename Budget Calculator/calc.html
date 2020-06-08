@@ -5,8 +5,10 @@
     <title>Calculated Page</title>
     <link rel="stylesheet" href="stylescripts/homepage.css">
   </head>
-  <body id="budget_calculator_html_body" onload="calculateBudgetOnIncome(2000);">
-    <p>You have successfully submitted &#10003;</p>
+  <body id="budget_calculator_html_body" onload="calculateBudgetOnIncome();">
+    <div class="finance_detail">
+      Remaining Time for Budget End: <p id="dt_value"></p>
+    </div>
       <div class="expense_overview" id="finance_manager">
         <div class="overview_title">
           <h3>Financial summary:</h3>
@@ -66,12 +68,12 @@
           <option name= "bills" value="Bills">Bills</option>
         </select><br><br>
         <label for="amount">Amount: </label>
-        <input type="number" name="amount" id="amount" value="0"><br><br>
+        <input type="number" name="add_more_amounts" id="amount" value="0"><br><br>
         <label for="expensedate">
         Date of Expense:
       </label>
       <input type="date" name="ependiture_date" id="ependiture_date" value=""><br><br>
-      <input type="button" name="more_expense" value="Add More Expense" onclick="addAllExplenses()>
+      <input type="button" name="more_expense" value="Add More Expense" onclick="addAllExplenses()">
     </form>
   </div>
   <div>
@@ -165,7 +167,10 @@
       <button type="button" name="button" onclick="showAllExpenses()" >View all </button>
     </span>
   </div>
-
+  <footer>
+  <p>Author: Amar Yadav<br>
+  <a href="mailto:amar.yadav@nagarro.com">amar.yadav@nagarro.com</a></p>
+  </footer>
 <!-- javascripts
   <script type="text/javascript" src="javascripts/homepagescript.js">
   </script>

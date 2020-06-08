@@ -1,5 +1,45 @@
 
-var incomeamount = 2000;
+
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+
+var params = getParams();
+var incomeamount = unescape(params["incomeamount"]);
+var end_date= unescape(params["bdgtdate"]);
+//document.getElementById('dt_value').innerHTML=end_date;
+
+
+var countDownDate = new Date(end_date).getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var _total_hour = hours + days*24;
+  document.getElementById("dt_value").innerHTML = _total_hour + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("dt_value").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+
+
+
 function calculateBudgetOnIncome(){
   var _temp=incomeamount*20;
   var amountToReduce=_temp/100;
@@ -15,9 +55,12 @@ function calculateBudgetOnIncome(){
 function addAllExplenses()
 {
   var _currentExpenseAmount = parseInt(document.getElementById('expense_amount').innerHTML);
-  var expenseAmount = document.forms['add_more_expense_form']['amount'].value;
+  var expenseAmount = parseInt(document.forms['add_more_expense_form']['add_more_amounts'].value);
   expenseAmount = _currentExpenseAmount + expenseAmount;
   document.getElementById('expense_amount').innerHTML = expenseAmount;
+  var _current_Budget_Amount=parseInt(document.getElementById('budget_amount').innerHTML);
+  document.getElementById('balance_amount').innerHTML = _current_Budget_Amount - expenseAmount;
+  document.getElementById('saving_amount').innerHTML = incomeamount - expenseAmount;
 }
 function updateBudgetAmount(){
   var _currentBudgetAmount=parseInt(document.getElementById('budget_amount').innerHTML);
